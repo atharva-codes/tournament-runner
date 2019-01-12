@@ -25,12 +25,12 @@ def display_pairings(pairings):
 if __name__ == '__main__':
     t = TournamentFactory() \
         .name(_random_name(15)) \
-        .system('swiss', rounds=9) \
+        .system('dummy', rounds=9) \
         .storage('dummy') \
         .load()
 
     for i in range(random.randrange(15) + 1):
-        t.new_player(
+        t.enroll(
             name   = 'Player ' + (chr(ord('A') + i)),
             rating = 1800 + random.randrange(400),
             active = True,
@@ -41,9 +41,6 @@ if __name__ == '__main__':
 
         print('== Standings before round {} =='.format(t.current_round))
         display_standings(t.get_standings())
-
-        print('== Pairings before round {} =='.format(t.current_round))
-        display_pairings(t.current_games)
 
         for g in t.current_games:
             if g.player_a.rating > g.player_b.rating:

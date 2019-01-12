@@ -30,7 +30,7 @@ class TournamentSystem(object):
             p.pos = i + 1
         return result
 
-class SwissSystem(TournamentSystem):
+class DummySystem(TournamentSystem):
     def __init__(self, rounds):
         self._rounds = rounds
 
@@ -51,6 +51,6 @@ class SwissSystem(TournamentSystem):
         return result
 
 def load_tournament_system(system_name, **kwargs):
-    if system_name == 'swiss':
-        return SwissSystem(**kwargs)
+    if system_name == 'dummy':
+        return DummySystem(**kwargs)
     raise NotImplementedError('System {} not implemented!'.format(name))

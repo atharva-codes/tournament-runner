@@ -20,7 +20,7 @@ class Tournament(object):
         self._games   = {}
         self._round   = 0
 
-    def new_player(self, **kwargs):
+    def enroll(self, **kwargs):
         p = Player(id=len(self._players), **kwargs)
         self._players[p.id] = p
         self._storage.update_player(p)
