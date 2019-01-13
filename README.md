@@ -1,5 +1,5 @@
 
-== About
+# About
 
 This app is not ready, work in progress :)
 
@@ -11,7 +11,7 @@ Planned tournament system: swiss, and we'll add more.
 
 The data will be stored in a local json file, which will be extendable too.
 
-== Known alternatives
+# Known alternatives
 
 1. https://www.susendian.nl/swissmaster/
 1. https://github.com/BieremaBoyzProgramming/bbpPairings
