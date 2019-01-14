@@ -1,6 +1,6 @@
-from model import Model
-from tournament_system import load_tournament_system
-from tournament_storage import load_tournament_storage
+from src.model import Model
+from src.tournament_system import load_tournament_system
+from src.tournament_storage import load_tournament_storage
 from collections import defaultdict
 
 
