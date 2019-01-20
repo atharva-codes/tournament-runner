@@ -1,4 +1,4 @@
-from src.model import Model
+from tournament_runner.model import Model
 from random import shuffle, choice
 
 class RoundPlayerPairing(Model):

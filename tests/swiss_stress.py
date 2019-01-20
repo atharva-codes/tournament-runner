@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-from src.tournament import TournamentFactory
-from src.tournament_system import SwissSystemError
+from tournament_runner.tournament import TournamentFactory
+from tournament_runner.tournament_system import SwissSystemError
 import random
 import string
 
