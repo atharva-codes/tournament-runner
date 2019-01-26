@@ -26,6 +26,16 @@ class Tournament(object):
         self._players = {}
         self._games   = {}
         self._round   = 0
+        
+    @property
+    def json(self):
+      return {
+          'name': self._name,
+          'players': self._players,
+          'games': self._games,
+          'round': self._round,
+    }
+
 
     def enroll(self, **kwargs):
         p = Player(id=len(self._players), fake=False, **kwargs)
@@ -137,7 +147,7 @@ class TournamentFactory(object):
         ]):
             raise ValueError("Error: need all arguments!")
         return Tournament(
-            name    = self.name,
+            name    = self._name,
             system  = self._system,
             storage = self._storage,
         )
